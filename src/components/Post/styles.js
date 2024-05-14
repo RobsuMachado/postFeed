@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     profilePic: {
         width: 50,
         height: 50,
-        backgroundColor: 'black',
+        backgroundColor: '#666666',
         borderRadius: 25,
         marginRight: 10,
     },
@@ -17,10 +17,26 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 5,
+        color: '#333333'
     },
     time: {
         fontSize: 14,
         color: '#777777',
+    },
+    text: {
+        fontSize: 16,
+        marginBottom: 10,
+        color: '#333333'
+    },
+    postImage: {
+        width: '100%',
+        height: 200,
+        marginBottom: 10,
+        backgroundColor: '#666666'
+    },
+    actionContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
 });
 
