@@ -3,7 +3,15 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
-const Post = ({ profilePic, username, time, text, image, onComment, onLike, onShare }) => {
+const Post = ({ profilePic,
+    username,
+    time,
+    text,
+    image,
+    onComment,
+    onLike,
+    onShare
+}) => {
     return (
         <View style={styles.container}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -17,7 +25,7 @@ const Post = ({ profilePic, username, time, text, image, onComment, onLike, onSh
 
             {image && <Image source={{ uri: image }} style={styles.postImage} />}
 
-            <View style={styles.actionContainer}>
+            {/* <View style={styles.actionContainer}>
                 <TouchableOpacity onPress={onComment}>
                     <Text>Comentar</Text>
                 </TouchableOpacity>
@@ -27,7 +35,7 @@ const Post = ({ profilePic, username, time, text, image, onComment, onLike, onSh
                 <TouchableOpacity onPress={onShare}>
                     <Text>Compartilhar</Text>
                 </TouchableOpacity>
-            </View>
+            </View> */}
         </View>
     );
 };
