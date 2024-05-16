@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 
 import styles from './styles';
 
-const Post = ({ profilePic,
+const Post = ({ 
+    profilePic,
     username,
     time,
     text,
@@ -14,8 +16,8 @@ const Post = ({ profilePic,
 }) => {
     return (
         <View style={styles.container}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Image source={{ uri: profilePic }} style={styles.profilePic} />
+            <View style={{ flexDirection: 'row', alignItems: 'center' , marginBottom: 4}}>
+                <Image source={ profilePic } style={styles.profilePic} />
                 <View style={{ flexDirection: 'column' }}>
                     <Text style={styles.username}>{username}</Text>
                     <Text style={styles.time}>{time}</Text>
@@ -23,19 +25,19 @@ const Post = ({ profilePic,
             </View>
             <Text style={styles.text}>{text}</Text>
 
-            {image && <Image source={{ uri: image }} style={styles.postImage} />}
+            {image && <Image source={ image } style={styles.postImage} />}
 
-            {/* <View style={styles.actionContainer}>
+            <View style={styles.actionContainer}>
                 <TouchableOpacity onPress={onComment}>
-                    <Text>Comentar</Text>
+                <Feather name="bookmark" size={26} color="#333" />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={onLike}>
-                    <Text>Favorito</Text>
+                <Feather name="message-circle" size={26} color="#333" />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={onShare}>
-                    <Text>Compartilhar</Text>
+                <Feather name="share-2" size={26} color="#333" />
                 </TouchableOpacity>
-            </View> */}
+            </View>
         </View>
     );
 };

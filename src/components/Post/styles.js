@@ -9,22 +9,23 @@ const styles = StyleSheet.create({
     profilePic: {
         width: 50,
         height: 50,
-        backgroundColor: '#666666',
+        // backgroundColor: '#666666',
         borderRadius: 25,
         marginRight: 10,
     },
     username: {
-        fontSize: 18,
+        fontSize: 15,
         fontWeight: 'bold',
-        marginBottom: 5,
+        marginBottom: 2,
         color: '#333333'
     },
     time: {
-        fontSize: 14,
+        fontSize: 13,
         color: '#777777',
     },
     text: {
-        fontSize: 16,
+        fontSize: 15,
+        fontWeight: 'semibold',
         marginBottom: 10,
         color: '#333333'
     },
@@ -32,11 +33,14 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 200,
         marginBottom: 10,
+        borderRadius: 100/9,
         backgroundColor: '#666666'
     },
     actionContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-end',
+        paddingRight: 5, 
+        gap: 30
     },
 });
 
